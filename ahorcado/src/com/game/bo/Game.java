@@ -31,6 +31,12 @@ public class Game {
             boolean hasWon = false;
             randomMovie = getRandomMovie();
 
+            if (randomMovie == null) {
+                System.out.println("No hay peliculas");
+                in.close();
+                return;
+            }
+
             System.out.println("Adivina la pelicula:" + lines());
 
             System.out.println("Tienes " + INTENTOS + " intentos");
@@ -170,7 +176,6 @@ public class Game {
             rand = SecureRandom.getInstanceStrong();
 
             if (movies.isEmpty()) {
-                System.out.println("No hay peliculas");
                 return null;
             }
 
