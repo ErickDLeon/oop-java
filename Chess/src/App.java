@@ -24,10 +24,12 @@ public class App {
             // System.out.println("move: " + position.toString());
             // System.out.println("is valid: " + queen.isValidMove(position));
 
+            if(!queen.isValidMove(position)) break;
+
             System.out.println("Chess");
             System.out.println("Position: " + queen.getPosition().toString());
             System.out.println();
-
+            
             for (int i = 0; i < 8; i++) {
                 for (int j = 0; j < 8; j++) {
                     if (queen.getPosition().getRow() == i && queen.getPosition().getColumn() == j) {

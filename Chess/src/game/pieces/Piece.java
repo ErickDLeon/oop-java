@@ -4,7 +4,7 @@ public class Piece {
     private Position position;
 
     public boolean isValidMove(Position position) {
-        boolean positionGreatherThanZero = position.getRow() > 0 && position.getColumn() > 0;
+        boolean positionGreatherThanZero = position.getRow() >= 0 && position.getColumn() >= 0;
         boolean positionSmallerThanBoard = position.getRow() < 8 && position.getColumn() < 8;
 
         return positionGreatherThanZero && positionSmallerThanBoard;

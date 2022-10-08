@@ -3,15 +3,14 @@ package game.pieces;
 public class Queen extends Piece {
 
     public Queen() {
-        // TODO document why this constructor is empty
+        super();
     }
 
     @Override
     public boolean isValidMove(Position position) {
-        boolean positionGreatherThanZero = position.getRow() >= 0 && position.getColumn() >= 0;
-        boolean positionSmallerThanBoard = position.getRow() < 8 && position.getColumn() < 8;
 
-        if (!(positionGreatherThanZero && positionSmallerThanBoard)) {
+        if (!super.isValidMove(position)) {
+            System.out.println("Movimiento invalido");
             return false;
         }
 
@@ -24,22 +23,22 @@ public class Queen extends Piece {
         boolean positionDiagonally = positionDiagonallyColumnAbs == positionDiagonallRowAbs;
 
         if (positionHorizontal && positionVertical) {
-            //System.out.println("No se movio");
+            System.out.println("No se movio");
             return false;
         }
         
         if (positionHorizontal) {
-            //System.out.println("horizontal");
+            System.out.println("horizontal");
             return true;
         }
 
         if (positionVertical) {
-            //System.out.println("vertical");
+            System.out.println("vertical");
             return true;
         }
 
         if (positionDiagonally) {
-            //System.out.println("Diagonal");
+            System.out.println("Diagonal");
             return true;
         } else {
             return false;
