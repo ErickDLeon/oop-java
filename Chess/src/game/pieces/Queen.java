@@ -24,22 +24,22 @@ public class Queen extends Piece {
         boolean positionDiagonally = positionDiagonallyColumnAbs == positionDiagonallRowAbs;
 
         if (positionHorizontal && positionVertical) {
-            System.out.println("No se movio");
+            //System.out.println("No se movio");
             return false;
         }
         
         if (positionHorizontal) {
-            System.out.println("horizontal");
+            //System.out.println("horizontal");
             return true;
         }
 
         if (positionVertical) {
-            System.out.println("vertical");
+            //System.out.println("vertical");
             return true;
         }
 
         if (positionDiagonally) {
-            System.out.println("Diagonal");
+            //System.out.println("Diagonal");
             return true;
         } else {
             return false;
